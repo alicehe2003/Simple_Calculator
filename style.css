@@ -43,3 +43,7 @@ button {
     border-color: white; 
     font-size: 25px;
 }
+
+#zero {
+    width: 205px; 
+}
