@@ -3,14 +3,14 @@ const leftBracket = document.querySelector("#leftBracket");
 const rightBracket = document.querySelector("#rightBracket"); 
 const mod = document.querySelector("#mod"); 
 const AC = document.querySelector("#AC"); 
-const seven = document.querySelectorAll("#seven"); 
+const seven = document.querySelector("#seven"); 
 const eight = document.querySelector("#eight"); 
 const nine = document.querySelector("#nine"); 
 const div = document.querySelector("#div"); 
 const four = document.querySelector("#four"); 
 const five = document.querySelector("#five"); 
 const six = document.querySelector("#six"); 
-const mult = document.querySelector("#seven"); 
+const mult = document.querySelector("#mult"); 
 const one = document.querySelector("#one"); 
 const two = document.querySelector("#two"); 
 const three = document.querySelector("#three"); 
@@ -22,6 +22,7 @@ const plus = document.querySelector("#plus");
 
 // select equation and result 
 let equation = document.querySelector("#equation"); 
+let str = ""; 
 let result = document.querySelector("#result"); 
 
 // each time a button is pressed, update and display equation 
@@ -49,4 +50,10 @@ dot.addEventListener("click", updateEquation);
 equal.addEventListener("click", updateEquation);
 plus.addEventListener("click", updateEquation);
 
+// updates equation depending on which button is pressed
+function updateEquation(event) {
+    const buttonClicked = event.target; 
+    str += buttonClicked.textContent; 
+    equation.textContent = str; 
+}
 
