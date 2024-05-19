@@ -50,6 +50,9 @@ dot.addEventListener("click", updateEquation);
 equal.addEventListener("click", updateEquation);
 plus.addEventListener("click", updateEquation);
 
+// has = already been pressed 
+let pressed = false; 
+
 // updates equation depending on which button is pressed
 function updateEquation(event) {
     const buttonClicked = event.target; 
@@ -57,7 +60,13 @@ function updateEquation(event) {
     // check if AC is clicked 
     if (this.id == "AC") {
         str = ""; 
-        equation.textContent = ""; 
+        equation.textContent = "Enter your equation: "; 
+        result.textContent = "0"; 
+        pressed = false; 
+        return; 
+    }
+
+    if (pressed) {
         return; 
     }
     
@@ -75,6 +84,7 @@ function calculateResult() {
     try {
         let val = eval(str); 
         result.textContent = val; 
+        pressed = true; 
     } catch (error) {
         result.textContent = "Error"; 
     }
