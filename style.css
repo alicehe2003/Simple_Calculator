@@ -13,6 +13,7 @@ body {
     align-content: stretch;
     justify-content: center;
     align-items: stretch; 
+    border-radius: 10px;
 }
 
 .screen {
