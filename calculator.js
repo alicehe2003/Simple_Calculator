@@ -20,3 +20,33 @@ const dot = document.querySelector("#dot");
 const equal = document.querySelector("#equal"); 
 const plus = document.querySelector("#plus"); 
 
+// select equation and result 
+let equation = document.querySelector("#equation"); 
+let result = document.querySelector("#result"); 
+
+// each time a button is pressed, update and display equation 
+// when = is pressed, calculate result from equation 
+// when AC is pressed, reset equation 
+
+leftBracket.addEventListener("click", updateEquation);
+rightBracket.addEventListener("click", updateEquation);
+mod.addEventListener("click", updateEquation);
+AC.addEventListener("click", updateEquation);
+seven.addEventListener("click", updateEquation);
+eight.addEventListener("click", updateEquation);
+nine.addEventListener("click", updateEquation);
+div.addEventListener("click", updateEquation);
+four.addEventListener("click", updateEquation);
+five.addEventListener("click", updateEquation);
+six.addEventListener("click", updateEquation);
+mult.addEventListener("click", updateEquation);
+one.addEventListener("click", updateEquation);
+two.addEventListener("click", updateEquation);
+three.addEventListener("click", updateEquation);
+minus.addEventListener("click", updateEquation);
+zero.addEventListener("click", updateEquation);
+dot.addEventListener("click", updateEquation);
+equal.addEventListener("click", updateEquation);
+plus.addEventListener("click", updateEquation);
+
+
