@@ -53,7 +53,27 @@ plus.addEventListener("click", updateEquation);
 // updates equation depending on which button is pressed
 function updateEquation(event) {
     const buttonClicked = event.target; 
+
+    // check if AC is clicked 
+    if (this.id == "AC") {
+        str = ""; 
+        equation.textContent = ""; 
+        return; 
+    }
+    
+    // check if = is clicked 
+    if (this.id == "equal") {
+        calculateResult(); 
+    }
+
     str += buttonClicked.textContent; 
     equation.textContent = str; 
 }
+
+// calculates the result of the equation 
+function calculateResult() {
+    console.log("calculate"); 
+}
+
+
 
