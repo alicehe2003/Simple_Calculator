@@ -72,7 +72,12 @@ function updateEquation(event) {
 
 // calculates the result of the equation 
 function calculateResult() {
-    console.log("calculate"); 
+    try {
+        let val = eval(str); 
+        result.textContent = val; 
+    } catch (error) {
+        result.textContent = "Error"; 
+    }
 }
 
 
