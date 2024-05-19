@@ -9,7 +9,7 @@ body {
     height: 600px; 
     margin: 50px; 
     flex-direction: column;
-    background-color: black;
+    background-color: rgb(69, 69, 69);
     align-content: stretch;
     justify-content: center;
     align-items: stretch; 
@@ -24,6 +24,8 @@ body {
     justify-content: center;
     align-items: flex-end;
     padding-right: 10px; 
+    font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS'; 
+    font-weight: 200;
 }
 
 #equation {
@@ -53,8 +55,9 @@ button {
     border-radius: 5px;
     border-color: white; 
     font-size: 25px;
+    background-color: rgb(255, 209, 217);
 }
 
-#zero {
-    width: 205px; 
+#equal {
+    background-color: rgb(255, 140, 159);
 }
